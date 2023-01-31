@@ -12,7 +12,7 @@ pipeline {
         branches: [[name: '*/main']],
         extensions: [[$class: 'CloneOption', timeout: 120]],
         gitTool: 'Default', 
-        userRemoteConfigs: [[url: 'https://github.com/preetidogra/ATA--groupworkRevised23JanRevised']]
+        userRemoteConfigs: [[url: 'https://github.com/preetidogra/ATAgroupWork_FinalProject']]
 		 
     ])
            	checkout scm
@@ -35,10 +35,10 @@ pipeline {
 		steps{
 			// Get some code from a GitHub repository
     		checkout([$class: 'GitSCM',
-        	branches: [[name: '*/main']],
+        	branches: [[name: '*/Preeti']],
         	extensions: [[$class: 'CloneOption', timeout: 120]],
         	gitTool: 'Default', 
-        	userRemoteConfigs: [['https://github.com/preetidogra/ATA--groupworkRevised23JanRevised']]
+        	userRemoteConfigs: [['https://github.com/preetidogra/ATAgroupWork_FinalProject']]
 			
 			   ]) 
 		cucumber buildStatus: "UNSTABLE",
