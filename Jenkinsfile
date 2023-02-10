@@ -9,7 +9,7 @@ pipeline {
         	steps {
 		// Get some code from a GitHub repository
     	checkout([$class: 'GitSCM',
-        branches: [[name: '*/main']],
+        branches: [[name: '*/POM-model']],
         extensions: [[$class: 'CloneOption', timeout: 120]],
         gitTool: 'Default', 
         userRemoteConfigs: [[url: 'https://github.com/preetidogra/ATAgroupWork_FinalProject']]
@@ -35,7 +35,7 @@ pipeline {
 		steps{
 			// Get some code from a GitHub repository
     		checkout([$class: 'GitSCM',
-        	branches: [[name: '*/Preeti']],
+        	branches: [[name: '*/POM-model']],
         	extensions: [[$class: 'CloneOption', timeout: 120]],
         	gitTool: 'Default', 
         	userRemoteConfigs: [['https://github.com/preetidogra/ATAgroupWork_FinalProject']]
